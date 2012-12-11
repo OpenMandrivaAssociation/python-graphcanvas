@@ -1,26 +1,18 @@
 %define module	graphcanvas
-%define name 	python-%{module}
-%define version 4.0.0
-%define	rel		2
-%if %mdkversion < 201100
-%define release %mkrel %{rel}
-%else
-%define	release %{rel}
-%endif
 
 Summary: 	Enthought Tool Suite - interactive graph visualization
-Name: 	 	%{name}
-Version: 	%{version}
-Release: 	%{release}
+Name: 	 	python-%{module}
+Version: 	4.0.0
+Release: 	3
 Source0: 	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
 License: 	BSD
 Group: 	 	Development/Python
 Url: 	 	https://github.com/enthought/graphcanvas/
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 	noarch
 Requires:  	python-enable >= 4.2.0
 Requires:  	python-networkx
 BuildRequires: 	python-setuptools >= 0.6c8
+Obsoletes:  python-enthought-graphcanvas
 
 %description
 graphcanvas is an library for interacting with visualizations of
@@ -34,13 +26,21 @@ by the simplest means and be able to visualize the graph immediately.
 %__python setup.py build
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
-
-%clean
-%__rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc examples/ 
 %py_sitedir/%{module}*
+
+
+%changelog
+* Mon Aug 13 2012 Lev Givon <lev@mandriva.org> 4.0.0-2
++ Revision: 814699
+- Rebuild for ETS 4.2.0.
+
+* Thu Jul 07 2011 Lev Givon <lev@mandriva.org> 4.0.0-1
++ Revision: 689185
+- import python-graphcanvas
+
+
