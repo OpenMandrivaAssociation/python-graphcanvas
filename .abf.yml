@@ -1,2 +1,4 @@
+removed_sources:
+  graphcanvas-4.0.0.tar.gz: 84a96024d052ecb12ea3ef3558ce949e200a1251
 sources:
-  "graphcanvas-4.0.0.tar.gz": 84a96024d052ecb12ea3ef3558ce949e200a1251
+  graphcanvas-4.0.2.tar.gz: ac9460a2e0b2c41c15da59298cd4fd5c276fc652

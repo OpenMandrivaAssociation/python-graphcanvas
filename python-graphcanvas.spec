@@ -2,9 +2,9 @@
 
 Summary: 	Enthought Tool Suite - interactive graph visualization
 Name: 	 	python-%{module}
-Version: 	4.0.0
-Release: 	3
-Source0: 	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
+Version: 	4.0.2
+Release: 	1
+Source0: 	https://www.enthought.com/repo/ets/graphcanvas-%{version}.tar.gz
 License: 	BSD
 Group: 	 	Development/Python
 Url: 	 	https://github.com/enthought/graphcanvas/
@@ -42,5 +42,6 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 * Thu Jul 07 2011 Lev Givon <lev@mandriva.org> 4.0.0-1
 + Revision: 689185
 - import python-graphcanvas
+
 
 
