@@ -3,7 +3,7 @@
 Summary: 	Enthought Tool Suite - interactive graph visualization
 Name: 	 	python-%{module}
 Version: 	4.0.2
-Release: 	1
+Release: 	2
 Source0: 	https://www.enthought.com/repo/ets/graphcanvas-%{version}.tar.gz
 License: 	BSD
 Group: 	 	Development/Python
